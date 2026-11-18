@@ -1,0 +1,423 @@
+{
+  "title": "Riconciliazione delle riscossioni",
+  "description": "Prototipo per confrontare movimenti del rendiconto con importi attesi, rivedere anomalie e registrare l'esito dei controlli. Dati e organizzazioni sono inventati; gli importi sono dimostrativi.",
+  "accent": "indigo",
+  "pages": [
+    {
+      "id": "panoramica",
+      "title": "Panoramica",
+      "description": "Quadro delle riscossioni riconciliate per mese. Il riepilogo mensile è consultabile nella tabella; il filtro per mese consente di restringere i risultati.",
+      "metrics": [
+        {
+          "label": "Importo atteso",
+          "value": "€ 18.450,00"
+        },
+        {
+          "label": "Riscosso",
+          "value": "€ 15.920,00"
+        },
+        {
+          "label": "Differenze aperte",
+          "value": "7"
+        },
+        {
+          "label": "Doppi versamenti",
+          "value": "2"
+        }
+      ],
+      "columns": [
+        "Mese",
+        "Importo atteso",
+        "Importo riscosso",
+        "Differenza",
+        "Movimenti",
+        "Esito"
+      ],
+      "rows": [
+        [
+          "Gennaio",
+          "€ 4.800,00",
+          "€ 4.800,00",
+          "€ 0,00",
+          "18",
+          "Riconciliato"
+        ],
+        [
+          "Febbraio",
+          "€ 4.650,00",
+          "€ 4.200,00",
+          "€ 450,00",
+          "16",
+          "Da verificare"
+        ],
+        [
+          "Marzo",
+          "€ 4.500,00",
+          "€ 4.920,00",
+          "€ -420,00",
+          "21",
+          "Doppi versamenti"
+        ],
+        [
+          "Aprile",
+          "€ 4.500,00",
+          "€ 2.000,00",
+          "€ 2.500,00",
+          "9",
+          "Parziale"
+        ]
+      ],
+      "form": [
+        "Mese",
+        "Importo atteso",
+        "Importo riscosso",
+        "Differenza",
+        "Movimenti",
+        "Esito"
+      ]
+    },
+    {
+      "id": "movimenti",
+      "title": "Movimenti estratti",
+      "description": "Elenco dimostrativo dei movimenti attribuiti dal rendiconto inventato. Ricerca e filtri per esito aiutano a individuare pagamenti mancanti, importi discordanti e possibili duplicati.",
+      "metrics": [
+        {
+          "label": "Movimenti esaminati",
+          "value": "12"
+        },
+        {
+          "label": "Da verificare",
+          "value": "4"
+        },
+        {
+          "label": "Possibili duplicati",
+          "value": "2"
+        }
+      ],
+      "columns": [
+        "Riferimento",
+        "Contribuente",
+        "Data",
+        "Importo",
+        "Causale",
+        "Esito"
+      ],
+      "rows": [
+        [
+          "MV-2401",
+          "Lumo Riva",
+          "08/01/2025",
+          "€ 320,00",
+          "Tributo annuale",
+          "Abbinato"
+        ],
+        [
+          "MV-2402",
+          "Nubi Selva",
+          "12/01/2025",
+          "€ 280,00",
+          "Tributo annuale",
+          "Abbinato"
+        ],
+        [
+          "MV-2403",
+          "Vela Brina",
+          "19/01/2025",
+          "€ 410,00",
+          "Tributo annuale",
+          "Abbinato"
+        ],
+        [
+          "MV-2404",
+          "Lumo Riva",
+          "19/01/2025",
+          "€ 320,00",
+          "Tributo annuale",
+          "Possibile doppio"
+        ],
+        [
+          "MV-2405",
+          "Nubi Selva",
+          "03/02/2025",
+          "€ 180,00",
+          "Rata",
+          "Importo discordante"
+        ],
+        [
+          "MV-2406",
+          "Vela Brina",
+          "10/02/2025",
+          "€ 0,00",
+          "Nessun movimento",
+          "Mancato pagamento"
+        ],
+        [
+          "MV-2407",
+          "Lumo Riva",
+          "14/02/2025",
+          "€ 320,00",
+          "Tributo annuale",
+          "Abbinato"
+        ],
+        [
+          "MV-2408",
+          "Nubi Selva",
+          "07/03/2025",
+          "€ 280,00",
+          "Tributo annuale",
+          "Abbinato"
+        ],
+        [
+          "MV-2409",
+          "Vela Brina",
+          "13/03/2025",
+          "€ 410,00",
+          "Tributo annuale",
+          "Abbinato"
+        ],
+        [
+          "MV-2410",
+          "Lumo Riva",
+          "13/03/2025",
+          "€ 410,00",
+          "Tributo annuale",
+          "Possibile doppio"
+        ],
+        [
+          "MV-2411",
+          "Nubi Selva",
+          "22/03/2025",
+          "€ 150,00",
+          "Rata",
+          "Importo discordante"
+        ],
+        [
+          "MV-2412",
+          "Vela Brina",
+          "05/04/2025",
+          "€ 0,00",
+          "Nessun movimento",
+          "Mancato pagamento"
+        ]
+      ],
+      "form": [
+        "Riferimento",
+        "Contribuente",
+        "Data",
+        "Importo",
+        "Causale",
+        "Esito"
+      ]
+    },
+    {
+      "id": "controlli",
+      "title": "Esiti dei controlli",
+      "description": "Registro dei controlli eseguiti nel confronto tra importi attesi e movimenti. È possibile filtrare per esito e aggiungere una nota di revisione.",
+      "metrics": [
+        {
+          "label": "Controlli eseguiti",
+          "value": "12"
+        },
+        {
+          "label": "Con esito regolare",
+          "value": "8"
+        },
+        {
+          "label": "Richiedono revisione",
+          "value": "4"
+        }
+      ],
+      "columns": [
+        "Controllo",
+        "Contribuente",
+        "Atteso",
+        "Rilevato",
+        "Esito",
+        "Nota"
+      ],
+      "rows": [
+        [
+          "Importo corrispondente",
+          "Lumo Riva",
+          "€ 320,00",
+          "€ 320,00",
+          "Regolare",
+          "Abbinamento univoco"
+        ],
+        [
+          "Importo corrispondente",
+          "Nubi Selva",
+          "€ 280,00",
+          "€ 280,00",
+          "Regolare",
+          "Abbinamento univoco"
+        ],
+        [
+          "Ricerca versamento",
+          "Vela Brina",
+          "€ 410,00",
+          "€ 410,00",
+          "Regolare",
+          "Abbinamento univoco"
+        ],
+        [
+          "Verifica duplicato",
+          "Lumo Riva",
+          "€ 320,00",
+          "€ 640,00",
+          "Da verificare",
+          "Due movimenti compatibili"
+        ],
+        [
+          "Confronto rata",
+          "Nubi Selva",
+          "€ 240,00",
+          "€ 180,00",
+          "Differenza",
+          "Scostamento di € 60,00"
+        ],
+        [
+          "Ricerca pagamento",
+          "Vela Brina",
+          "€ 410,00",
+          "€ 0,00",
+          "Mancante",
+          "Nessun movimento abbinato"
+        ],
+        [
+          "Verifica duplicato",
+          "Lumo Riva",
+          "€ 410,00",
+          "€ 820,00",
+          "Da verificare",
+          "Possibile doppio versamento"
+        ],
+        [
+          "Confronto rata",
+          "Nubi Selva",
+          "€ 210,00",
+          "€ 150,00",
+          "Differenza",
+          "Scostamento di € 60,00"
+        ]
+      ],
+      "form": [
+        "Controllo",
+        "Contribuente",
+        "Atteso",
+        "Rilevato",
+        "Esito",
+        "Nota"
+      ]
+    },
+    {
+      "id": "riconciliazione",
+      "title": "Riconciliazione",
+      "description": "Riepilogo delle righe abbinate e delle anomalie da risolvere. I comandi per importare i due rendiconti e preparare il prospetto sono rappresentati come azioni locali del prototipo; nessun file viene caricato o scaricato.",
+      "metrics": [
+        {
+          "label": "Righe attese",
+          "value": "24"
+        },
+        {
+          "label": "Abbinate",
+          "value": "17"
+        },
+        {
+          "label": "Differenze",
+          "value": "5"
+        },
+        {
+          "label": "Possibili duplicati",
+          "value": "2"
+        }
+      ],
+      "columns": [
+        "Contribuente",
+        "Periodo",
+        "Atteso",
+        "Riscosso",
+        "Differenza",
+        "Esito"
+      ],
+      "rows": [
+        [
+          "Lumo Riva",
+          "Gennaio",
+          "€ 320,00",
+          "€ 320,00",
+          "€ 0,00",
+          "Abbinato"
+        ],
+        [
+          "Nubi Selva",
+          "Gennaio",
+          "€ 280,00",
+          "€ 280,00",
+          "€ 0,00",
+          "Abbinato"
+        ],
+        [
+          "Vela Brina",
+          "Gennaio",
+          "€ 410,00",
+          "€ 410,00",
+          "€ 0,00",
+          "Abbinato"
+        ],
+        [
+          "Lumo Riva",
+          "Gennaio",
+          "€ 320,00",
+          "€ 640,00",
+          "€ -320,00",
+          "Possibile doppio"
+        ],
+        [
+          "Nubi Selva",
+          "Febbraio",
+          "€ 240,00",
+          "€ 180,00",
+          "€ 60,00",
+          "Differenza"
+        ],
+        [
+          "Vela Brina",
+          "Febbraio",
+          "€ 410,00",
+          "€ 0,00",
+          "€ 410,00",
+          "Mancato pagamento"
+        ],
+        [
+          "Lumo Riva",
+          "Febbraio",
+          "€ 320,00",
+          "€ 320,00",
+          "€ 0,00",
+          "Abbinato"
+        ],
+        [
+          "Nubi Selva",
+          "Marzo",
+          "€ 280,00",
+          "€ 280,00",
+          "€ 0,00",
+          "Abbinato"
+        ]
+      ],
+      "form": [
+        "Contribuente",
+        "Periodo",
+        "Atteso",
+        "Riscosso",
+        "Differenza",
+        "Esito"
+      ]
+    }
+  ],
+  "theme": {
+    "palette": "ardesia",
+    "fonts": "istituzionale"
+  }
+}
